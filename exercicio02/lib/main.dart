@@ -36,15 +36,13 @@ class _TelaVerificarIdadeState extends State<TelaVerificarIdade> {
     String nome = nomeController.text;
     int idade = int.tryParse(idadeController.text) ?? 0; // precisamos converter para int pois o TextField retorna os dados em formato de texto
 
-    if (idade >= 18) {
-      setState(() {
+    setState(() {
+      if (idade >= 18) {
         mensagem = '$nome é maior de idade.';
-      });
-    } else {
-      setState(() {
+      } else {
         mensagem = '$nome é menor de idade.';
-      });
-    }
+      }
+    });
   }
 
   void limparCampos() {
@@ -68,7 +66,7 @@ class _TelaVerificarIdadeState extends State<TelaVerificarIdade> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Mostrar Dados')),
+      appBar: AppBar(title: Text('Verificador de Idade')),
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -83,6 +81,7 @@ class _TelaVerificarIdadeState extends State<TelaVerificarIdade> {
             SizedBox(height: 15),
             TextField(
               controller: idadeController,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: 'Idade',
                 border: OutlineInputBorder(),
