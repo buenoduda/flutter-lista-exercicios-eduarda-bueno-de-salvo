@@ -1,5 +1,5 @@
 // exercício 3 - antecessor e sucessor
-// Peça ao usuário um número inteiro. Ao pressionar Calcular, mostre o número informado, seu antecessor e seu sucessor
+// Peça ao usuário um número inteiro. Ao pressionar Calcular, mostre o número informado, seu antecessor e seu sucessor.
 
 import 'package:flutter/material.dart';
 
