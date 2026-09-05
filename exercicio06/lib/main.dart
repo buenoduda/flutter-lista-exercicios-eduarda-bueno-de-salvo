@@ -66,12 +66,12 @@ class _TelaCalculadoraState extends State<TelaCalculadora> {
     double num1 = double.tryParse(num1Controller.text) ?? 0;
     double num2 = double.tryParse(num2Controller.text) ?? 0;
 
-    double divisao = num1 / num2;
     setState(() {
       if (num2 != 0) {
-        mensagem = 'Resuldado = $divisao';
+        double resultado = num1 / num2;
+        mensagem = 'Resultado: $resultado';
       } else {
-        mensagem = 'Não é possível dividir por 0';
+        mensagem = 'Não é possível dividir por zero.';
       }
     });
   }
@@ -95,7 +95,7 @@ class _TelaCalculadoraState extends State<TelaCalculadora> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Média Aluno')),
+      appBar: AppBar(title: Text('Calculadora')),
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -119,17 +119,13 @@ class _TelaCalculadoraState extends State<TelaCalculadora> {
             ),
             SizedBox(height: 15),
     
-            Row( // botões
-              mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(onPressed: soma, child: Text('+')),
-                SizedBox(width: 20), // espaçamento entre os botões
                 ElevatedButton(onPressed: subtracao, child: Text('-')),
-                SizedBox(width: 20),
                 ElevatedButton(onPressed: multiplicacao, child: Text('×')),
-                SizedBox(width: 20),
                 ElevatedButton(onPressed: divisao, child: Text('÷')),
-                SizedBox(width: 20),
                 ElevatedButton(onPressed: limparCampos, child: Text('Limpar')),
               ],
             ),
