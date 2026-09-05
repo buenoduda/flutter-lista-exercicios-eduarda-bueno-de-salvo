@@ -6,8 +6,10 @@ Repositório com os exercícios práticos desenvolvidos em Flutter para a discip
 
 ## 👤 Identificação do Aluno
 
-- **Nome Completo:** [Seu Nome Completo]
-- **Turma / Disciplina:** [Nome da Disciplina]
+- **Nome Completo:** Eduarda Bueno de Salvo
+- **Turma / Disciplina:** Programação de Dispositivos Móveis
+- **Faculdade:** EEP - Escola de Engenharia de Piracicaba
+- **Curso:** Ciência da Computação
 - **Ambiente:** Visual Studio Code (VS Code) & Flutter SDK
 - **Data:** Setembro / 2026
 
